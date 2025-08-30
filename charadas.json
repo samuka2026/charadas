@@ -1,20 +1,102 @@
 [
   {
     "categoria": "Filme",
-    "emoji": "🚢 ❄️ 💔",
-    "resposta": "Titanic",
-    "dicas": ["Ano 1997", "Diretor James Cameron", "Protagonistas Leonardo DiCaprio e Kate Winslet"]
+    "emoji": "🧙‍♂️🪄🧹⚡",
+    "resposta": "Harry Potter",
+    "dicas": [
+      "Um jovem bruxo com uma cicatriz na testa.",
+      "Estuda na Escola de Magia e Bruxaria de Hogwarts.",
+      "Possui amigos chamados Rony e Hermione."
+    ]
   },
   {
-    "categoria": "Ditado Popular",
-    "emoji": "🐦 🤲",
-    "resposta": "Mais vale um pássaro na mão do que dois voando",
-    "dicas": ["Frase antiga", "Fala sobre escolhas", "É sobre preferir algo certo"]
+    "categoria": "Filme",
+    "emoji": "🦁👑🌅",
+    "resposta": "O Rei Leão",
+    "dicas": [
+      "Um príncipe leão chamado Simba.",
+      "Um vilão chamado Scar.",
+      "Fala sobre o ciclo da vida."
+    ]
+  },
+  {
+    "categoria": "Filme",
+    "emoji": "🚢❄️🧊❤️",
+    "resposta": "Titanic",
+    "dicas": [
+      "Um navio que afunda em uma viagem histórica.",
+      "Um romance entre Jack e Rose.",
+      "Cena famosa no convés com braços abertos."
+    ]
   },
   {
     "categoria": "Música",
-    "emoji": "🕺🌙",
-    "resposta": "Dancing in the Moonlight",
-    "dicas": ["Década de 70", "Muito tocada em filmes", "Banda King Harvest"]
+    "emoji": "👩‍🎤🎤🎶",
+    "resposta": "Adele",
+    "dicas": [
+      "Cantora britânica famosa por baladas emotivas.",
+      "Música famosa: 'Hello'.",
+      "Ganhou vários Grammys."
+    ]
+  },
+  {
+    "categoria": "Música",
+    "emoji": "👨‍🎤🕺🎵💃",
+    "resposta": "Michael Jackson",
+    "dicas": [
+      "Rei do Pop.",
+      "Famoso pelo passo de dança 'Moonwalk'.",
+      "Hit mundial: 'Thriller'."
+    ]
+  },
+  {
+    "categoria": "Filme",
+    "emoji": "🧛‍♂️🩸🏰",
+    "resposta": "Drácula",
+    "dicas": [
+      "Um vampiro clássico da literatura e cinema.",
+      "Vive em um castelo na Transilvânia.",
+      "Famoso por morder pescoços."
+    ]
+  },
+  {
+    "categoria": "Música",
+    "emoji": "👑🎤🎵",
+    "resposta": "Beyoncé",
+    "dicas": [
+      "Ex-integrante do grupo Destiny's Child.",
+      "Hits famosos: 'Single Ladies' e 'Halo'.",
+      "Rainha do Pop moderno."
+    ]
+  },
+  {
+    "categoria": "Filme",
+    "emoji": "👽📞🏠🌌",
+    "resposta": "E.T. - O Extraterrestre",
+    "dicas": [
+      "Um alienígena que se perde na Terra.",
+      "Amizade com um garoto chamado Elliott.",
+      "Famosa frase: 'E.T. phone home'."
+    ]
+  },
+  {
+    "categoria": "Música",
+    "emoji": "🎸👨‍🎤🎶",
+    "resposta": "Elvis Presley",
+    "dicas": [
+      "O rei do Rock 'n' Roll.",
+      "Famoso por 'Jailhouse Rock'.",
+      "Cantor americano icônico dos anos 50."
+    ]
+  },
+  {
+    "categoria": "Filme",
+    "emoji": "🦖🌴🚫",
+    "resposta": "Jurassic Park",
+    "dicas": [
+      "Parque temático com dinossauros vivos.",
+      "Cientistas clonam dinossauros.",
+      "Cena famosa: T-Rex ataca o carro."
+    ]
   }
 ]
