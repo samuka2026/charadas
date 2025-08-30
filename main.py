@@ -180,6 +180,7 @@ def callback_resposta(call):
     if escolha == rodada["resposta"]:
         ranking[user] = ranking.get(user, 0) + pontos
         salvar_ranking()
+        bot.answer_callback_query(call.id, f"✅ {user}, resposta correta! +{pontos} pts")
         enviar_novo_balão_pos_acerto(user, pontos)
         encerrar_rodada(revelar=False)
     else:
