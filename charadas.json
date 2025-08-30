@@ -1,102 +1,728 @@
 [
   {
+    "emoji": "🐭👨‍🍳🍝🗼🧀👩‍🍳👀",
+    "resposta": "Ratatouille",
     "categoria": "Filme",
-    "emoji": "🧙‍♂️🪄🧹⚡",
-    "resposta": "Harry Potter",
-    "dicas": [
-      "Um jovem bruxo com uma cicatriz na testa.",
-      "Estuda na Escola de Magia e Bruxaria de Hogwarts.",
-      "Possui amigos chamados Rony e Hermione."
-    ]
+    "dicas": ["Filme da Pixar", "Um rato quer ser chef", "Paris é o cenário principal"]
   },
   {
+    "emoji": "💍🧙‍♂️🧝‍♂️🗻⚔️👑🧙‍♀️",
+    "resposta": "O Senhor dos Anéis",
     "categoria": "Filme",
+    "dicas": ["Baseado em livro famoso", "Um anel poderoso", "A jornada de Frodo"]
+  },
+  {
+    "emoji": "🕷️🧑‍🎓🏙️🕸️🦸‍♂️",
+    "resposta": "Homem-Aranha",
+    "categoria": "Personagem",
+    "dicas": ["Super-herói da Marvel", "Mordeu uma aranha radioativa", "Balança entre prédios de Nova York"]
+  },
+  {
+    "emoji": "🦁👑🌍🐾🌅",
+    "resposta": "O Rei Leão",
+    "categoria": "Filme",
+    "dicas": ["Desenho clássico da Disney", "Leão herda o trono", "A savana africana é o cenário"]
+  },
+  {
+    "emoji": "🧛‍♂️🩸🏰🌙🦇",
+    "resposta": "Drácula",
+    "categoria": "Personagem",
+    "dicas": ["Vampiro famoso", "Dorme em caixão durante o dia", "Bebe sangue"]
+  },
+  {
+    "emoji": "🦸‍♂️🦇🌃🗡️🖤",
+    "resposta": "Batman",
+    "categoria": "Personagem",
+    "dicas": ["Herói da DC", "Vigia Gotham à noite", "Usa morcego como símbolo"]
+  },
+  {
+    "emoji": "🦸‍♂️⚡💨👟🔴",
+    "resposta": "Flash",
+    "categoria": "Personagem",
+    "dicas": ["Herói da DC", "Corre extremamente rápido", "Veste uniforme vermelho com raio"]
+  },
+  {
+    "emoji": "🧙‍♂️🦉🏰⚡📚🧹",
+    "resposta": "Harry Potter",
+    "categoria": "Filme",
+    "dicas": ["Menino bruxo famoso", "Vai para Hogwarts", "Marca de cicatriz na testa"]
+  },
+  {
+    "emoji": "🧞‍♂️🕌✨💎👳‍♂️🧞‍♀️",
+    "resposta": "Aladdin",
+    "categoria": "Filme",
+    "dicas": ["Filme da Disney", "Lampada mágica", "Gênio concede desejos"]
+  },
+  {
+    "emoji": "🐧🎩🎶🕵️‍♂️❄️",
+    "resposta": "Os Pinguins de Madagascar",
+    "categoria": "Desenho Animado",
+    "dicas": ["Quarteto de pinguins", "Inteligentes e travessos", "Filme derivado de Madagascar"]
+  },
+  {
+    "emoji": "🐸🎤🎹🎶",
+    "resposta": "Kermit",
+    "categoria": "Personagem",
+    "dicas": ["Sapo famoso", "Apresentador de show", "Muppets"]
+  },
+  {
+    "emoji": "🧙‍♂️🗡️🐉🏞️",
+    "resposta": "O Hobbit",
+    "categoria": "Filme",
+    "dicas": ["Livro de J.R.R. Tolkien", "Pequeno aventureiro", "Dragão Smaug"]
+  },
+  {
+    "emoji": "🎸👨‍🎤🌟🎤",
+    "resposta": "Freddie Mercury",
+    "categoria": "Cantor",
+    "dicas": ["Vocalista do Queen", "Ícone do rock", "Conhecido por performances no palco"]
+  },
+  {
+    "emoji": "🎤👨‍🎤🇨🇦🎶🎧",
+    "resposta": "Justin Bieber",
+    "categoria": "Cantor",
+    "dicas": ["Cantor pop canadense", "Famoso desde adolescente", "Músicas de sucesso mundial"]
+  },
+  {
+    "emoji": "🎵👨‍🎤🎸🎷",
+    "resposta": "Elvis Presley",
+    "categoria": "Cantor",
+    "dicas": ["Rei do Rock", "Famoso nos anos 50", "Movimentos de dança icônicos"]
+  },
+  {
+    "emoji": "🐵🍌🦧🏙️🎥",
+    "resposta": "King Kong",
+    "categoria": "Filme",
+    "dicas": ["Gigante gorila", "Amor por mulher humana", "Filme clássico do cinema"]
+  },
+  {
+    "emoji": "👨‍🎓🧙‍♂️🐍🔒",
+    "resposta": "Harry Potter e a Câmara Secreta",
+    "categoria": "Filme",
+    "dicas": ["Segundo filme da saga", "A Câmara Secreta é aberta", "Serpente e perigo"]
+  },
+  {
+    "emoji": "🦁🐘🐍🌅",
+    "resposta": "O Rei Leão 2",
+    "categoria": "Filme",
+    "dicas": ["Sequência do clássico", "Novo leão herda o trono", "Música nova da Disney"]
+  },
+  {
+    "emoji": "👑🧝‍♂️💍🏞️🧙‍♂️",
+    "resposta": "O Hobbit: Uma Jornada Inesperada",
+    "categoria": "Filme",
+    "dicas": ["Primeiro filme da trilogia do Hobbit", "Bilbo Bolseiro", "Anel encontrado"]
+  },
+  {
+    "emoji": "🦸‍♂️🛡️⭐🇺🇸",
+    "resposta": "Capitão América",
+    "categoria": "Personagem",
+    "dicas": ["Herói da Marvel", "Escudo icônico", "Soldado do século XX"]
+  },
+  {
+    "emoji": "🦸‍♂️🔨⚡🌩️",
+    "resposta": "Thor",
+    "categoria": "Personagem",
+    "dicas": ["Herói da Marvel", "Deus do Trovão", "Martelo Mjolnir"]
+  },
+  {
+    "emoji": "🦹‍♂️🪐🛡️💀",
+    "resposta": "Thanos",
+    "categoria": "Personagem",
+    "dicas": ["Vilão da Marvel", "Coleciona pedras do infinito", "Desejo de apagar metade da vida"]
+  },
+  {
+    "emoji": "🌪️👠🧙‍♀️🦁🛤️",
+    "resposta": "O Mágico de Oz",
+    "categoria": "Filme",
+    "dicas": ["Clássico do cinema", "Casa voa com tornado", "Cidade Esmeralda"]
+  },
+  {
+    "emoji": "🧙‍♂️🔥🐍🏰",
+    "resposta": "Harry Potter e o Prisioneiro de Azkaban",
+    "categoria": "Filme",
+    "dicas": ["Terceiro filme da saga", "Sirius Black aparece", "Azkaban é a prisão"]
+  },
+  {
+    "emoji": "🦇🃏💣🏙️",
+    "resposta": "Coringa",
+    "categoria": "Personagem",
+    "dicas": ["Vilão da DC", "Inimigo do Batman", "Sorriso perturbador"]
+  },
+  {
+    "emoji": "🦸‍♀️🛡️🇺🇸💥",
+    "resposta": "Capitã Marvel",
+    "categoria": "Personagem",
+    "dicas": ["Heroína da Marvel", "Super força e voo", "Carol Danvers"]
+  },
+  {
+    "emoji": "👨‍🎤🎤🎶🕺",
+    "resposta": "Michael Jackson",
+    "categoria": "Cantor",
+    "dicas": ["Rei do Pop", "Moonwalk famoso", "Thriller é um hit"]
+  },
+  {
+    "emoji": "🐭🧀🎩👠",
+    "resposta": "Mickey Mouse",
+    "categoria": "Desenho Animado",
+    "dicas": ["Rato icônico da Disney", "Usa luvas brancas", "Amigo da Minnie"]
+  },
+  {
+    "emoji": "🧙‍♀️🏰🐉🕸️",
+    "resposta": "Malévola",
+    "categoria": "Filme",
+    "dicas": ["Vilã clássica", "Filme da Disney", "Transforma pessoas em animais ou dormem"]
+  },
+  {
+    "emoji": "👨‍🚀🌌🚀⏳",
+    "resposta": "Interestelar",
+    "categoria": "Filme",
+    "dicas": ["Ficção científica", "Viagem pelo espaço", "Christopher Nolan"]
+  },
+  {
+    "emoji": "👵🍎😈🌲🏰",
+    "resposta": "Branca de Neve",
+    "categoria": "Filme",
+    "dicas": ["Princesa da Disney", "Morde a maçã envenenada", "Sete anões são amigos"]
+  },
+  {
+    "emoji": "🐶👮‍♂️🚓🏙️",
+    "resposta": "Patrulha Canina",
+    "categoria": "Desenho Animado",
+    "dicas": ["Grupo de cães heróis", "Ajuda a cidade", "Cada um tem um veículo diferente"]
+  },
+  {
+    "emoji": "🐍⚡👦🧙‍♂️🏰",
+    "resposta": "Harry Potter e a Pedra Filosofal",
+    "categoria": "Filme",
+    "dicas": ["Primeiro filme da saga", "Descobre que é bruxo", "Pedra com poderes mágicos"]
+  },
+  {
+    "emoji": "🦸‍♀️🕷️🏙️🖤",
+    "resposta": "Mulher-Aranha",
+    "categoria": "Personagem",
+    "dicas": ["Heroína da Marvel", "Poderes de aranha", "Veste uniforme vermelho e azul"]
+  },
+  {
+    "emoji": "👑🦁🌅🐾",
+    "resposta": "Simba",
+    "categoria": "Filme",
+    "dicas": ["Filho de Mufasa", "Protagonista do Rei Leão", "Aprende a assumir o trono"]
+  },
+  {
+    "emoji": "🐺🏞️🌕🩸",
+    "resposta": "Lobisomem",
+    "categoria": "Personagem",
+    "dicas": ["Transforma-se à lua cheia", "Clássico do terror", "Metamorfose animal"]
+  },
+  {
+    "emoji": "🦸‍♂️🕸️🏙️",
+    "resposta": "Miles Morales",
+    "categoria": "Personagem",
+    "dicas": ["Novo Homem-Aranha", "Filme animado", "Vive no Brooklyn"]
+  },
+  {
+    "emoji": "🎤👩‍🎤🎶🦋",
+    "resposta": "Adele",
+    "categoria": "Cantor",
+    "dicas": ["Cantora britânica", "Vocal potente", "Hits emocionantes"]
+  },
+  {
+    "emoji": "👩‍🎤🕺🎶💋",
+    "resposta": "Madonna",
+    "categoria": "Cantor",
+    "dicas": ["Ícone pop dos anos 80", "Músicas de sucesso mundial", "Rainha do Pop"]
+  },
+  {
+    "emoji": "🦸‍♂️🛡️⭐💪",
+    "resposta": "Steve Rogers",
+    "categoria": "Personagem",
+    "dicas": ["Capitão América", "Herói da Marvel", "Escudo como arma"]
+  },
+  {
+    "emoji": "👧🌊🐟🐠🐡",
+    "resposta": "A Pequena Sereia",
+    "categoria": "Filme",
+    "dicas": ["Filme da Disney", "Princesa do mar", "Quer viver na terra"]
+  },
+  {
+    "emoji": "🐼🥋🐉🗻",
+    "resposta": "Kung Fu Panda",
+    "categoria": "Filme",
+    "dicas": ["Filme animado", "Panda mestre de kung fu", "Treinamento intenso"]
+  },
+  {
+    "emoji": "🧙‍♂️🦉🕯️🏰🧹",
+    "resposta": "Dumbledore",
+    "categoria": "Personagem",
+    "dicas": ["Diretor de Hogwarts", "Mentor de Harry", "Barba longa e chapéu pontudo"]
+  },
+  {
+    "emoji": "🦹‍♂️💀🪐✨",
+    "resposta": "Voldemort",
+    "categoria": "Personagem",
+    "dicas": ["Vilão de Harry Potter", "Sem nariz", "Busca imortalidade"]
+  },
+  {
+    "emoji": "🦸‍♀️🦸‍♂️💥🛡️",
+    "resposta": "Os Vingadores",
+    "categoria": "Filme",
+    "dicas": ["Equipe de heróis da Marvel", "Salva o mundo juntos", "Inclui Thor, Homem de Ferro e Capitão América"]
+  },
+  {
+    "emoji": "🦸‍♂️🕷️💀🏙️",
+    "resposta": "Venom",
+    "categoria": "Personagem",
+    "dicas": ["Vilão/anti-herói", "Simbionte alienígena", "Ameaça ao Homem-Aranha"]
+  },
+  {
+    "emoji": "🐱👓🎩🕵️‍♂️",
+    "resposta": "Gato de Botas",
+    "categoria": "Filme",
+    "dicas": ["Personagem de Shrek", "Usa botas e chapéu", "Espadachim habilidoso"]
+  },
+  {
+    "emoji": "🦸‍♀️🦸‍♂️🛡️💥🌎",
+    "resposta": "Liga da Justiça",
+    "categoria": "Filme",
+    "dicas": ["Equipe de heróis da DC", "Inclui Batman, Superman e Mulher-Maravilha", "Defende a Terra"]
+  },
+  {
+    "emoji": "🎤👨‍🎤🎸💃",
+    "resposta": "Bruno Mars",
+    "categoria": "Cantor",
+    "dicas": ["Cantor pop americano", "Performance energética", "Hits dançantes"]
+  },
+  {
+    "emoji": "🦸‍♂️🦸‍♀️🛡️⚡🌌",
+    "resposta": "Guardiões da Galáxia",
+    "categoria": "Filme",
+    "dicas": ["Equipe da Marvel no espaço", "Inclui Star-Lord e Gamora", "Aventura intergaláctica"]
+  },
+  {
+    "emoji": "👵🧙‍♀️🍎🌲🏰",
+    "resposta": "Bruxa Má do Oeste",
+    "categoria": "Filme",
+    "dicas": ["Vilã clássica", "O Mágico de Oz", "Quer capturar Dorothy"]
+  },
+  {
+    "emoji": "👨‍🚀🌍🪐🕳️",
+    "resposta": "Gravidade",
+    "categoria": "Filme",
+    "dicas": ["Filme espacial", "Sandra Bullock protagonista", "Nave descontrolada no espaço"]
+  },
+  {
+    "emoji": "🦁🐯🐻🐵🌴",
+    "resposta": "Madagascar",
+    "categoria": "Filme",
+    "dicas": ["Animais de zoo vão para ilha", "Leão, zebra e girafa", "Filme animado da DreamWorks"]
+  },
+  {
+    "emoji": "🐻🍯🎩👦",
+    "resposta": "Ursinho Pooh",
+    "categoria": "Desenho Animado",
+    "dicas": ["Urso adorável", "Ama mel", "Amigos: Tigrão e Leitão"]
+  },
+  {
+    "emoji": "👩‍🎤🎤🎶🕺",
+    "resposta": "Lady Gaga",
+    "categoria": "Cantor",
+    "dicas": ["Cantora pop americana", "Looks extravagantes", "Hits como Poker Face"]
+  },
+  {
+    "emoji": "🧛‍♀️🧛‍♂️🏰💔",
+    "resposta": "Crepúsculo",
+    "categoria": "Filme",
+    "dicas": ["Saga vampiresca", "Bella e Edward", "Romance sobrenatural"]
+  },
+  {
+    "emoji": "🐦🕊️🦅🏞️",
+    "resposta": "Rio",
+    "categoria": "Filme",
+    "dicas": ["Filme animado", "Pássaro azul do Brasil", "Viagem a cidade do Rio"]
+  },
+  {
+    "emoji": "👸🍎💤🌲",
+    "resposta": "Branca de Neve e os Sete Anões",
+    "categoria": "Filme",
+    "dicas": ["Princesa da Disney", "Maçã envenenada", "Sete amigos pequenos"]
+  },
+  {
+    "emoji": "🧙‍♂️🦄⚡🏰",
+    "resposta": "Fantasia",
+    "categoria": "Filme",
+    "dicas": ["Filme clássico de fantasia", "Criaturas mágicas", "Mundos imaginários"]
+  },
+  {
+    "emoji": "🦸‍♀️🦸‍♂️🌎🛡️💥",
+    "resposta": "X-Men",
+    "categoria": "Filme",
+    "dicas": ["Mutantes da Marvel", "Professor Xavier lidera", "Superpoderes variados"]
+  },
+  {
+    "emoji": "🦁🐘🐒🦓🌴",
+    "resposta": "Zootopia",
+    "categoria": "Filme",
+    "dicas": ["Cidade de animais", "Policial coelha", "Mistério para resolver"]
+  },
+  {
+    "emoji": "🧞‍♂️🕌💡",
+    "resposta": "Aladdin",
+    "categoria": "Filme",
+    "dicas": ["Filme da Disney", "Lâmpada mágica", "Desejos concedidos"]
+  },
+  {
     "emoji": "🦁👑🌅",
     "resposta": "O Rei Leão",
-    "dicas": [
-      "Um príncipe leão chamado Simba.",
-      "Um vilão chamado Scar.",
-      "Fala sobre o ciclo da vida."
-    ]
-  },
-  {
     "categoria": "Filme",
-    "emoji": "🚢❄️🧊❤️",
-    "resposta": "Titanic",
-    "dicas": [
-      "Um navio que afunda em uma viagem histórica.",
-      "Um romance entre Jack e Rose.",
-      "Cena famosa no convés com braços abertos."
-    ]
+    "dicas": ["Filme clássico da Disney", "Leão assume o trono", "Mufasa e Simba"]
   },
   {
-    "categoria": "Música",
-    "emoji": "👩‍🎤🎤🎶",
+    "emoji": "👩‍🦳🧊❄️",
+    "resposta": "Elsa",
+    "categoria": "Desenho Animado",
+    "dicas": ["Rainha da neve", "Filme Frozen", "Poderes de gelo"]
+  },
+  {
+    "emoji": "🕷️🦸‍♂️🗽",
+    "resposta": "Homem-Aranha",
+    "categoria": "Personagem",
+    "dicas": ["Heroi da Marvel", "Atira teias", "Vive em Nova York"]
+  },
+  {
+    "emoji": "🦇🏙️💣",
+    "resposta": "Batman",
+    "categoria": "Personagem",
+    "dicas": ["Herói da DC", "Mora em Gotham", "Usa morcego como símbolo"]
+  },
+  {
+    "emoji": "🦸‍♂️🔨⚡🌌",
+    "resposta": "Thor",
+    "categoria": "Personagem",
+    "dicas": ["Deus do Trovão", "Filho de Odin", "Usa martelo Mjolnir"]
+  },
+  {
+    "emoji": "👩‍🎤🎹🎶🖤",
     "resposta": "Adele",
-    "dicas": [
-      "Cantora britânica famosa por baladas emotivas.",
-      "Música famosa: 'Hello'.",
-      "Ganhou vários Grammys."
-    ]
+    "categoria": "Cantor",
+    "dicas": ["Cantora britânica", "Vocal marcante", "Hits emocionantes"]
   },
   {
-    "categoria": "Música",
-    "emoji": "👨‍🎤🕺🎵💃",
-    "resposta": "Michael Jackson",
-    "dicas": [
-      "Rei do Pop.",
-      "Famoso pelo passo de dança 'Moonwalk'.",
-      "Hit mundial: 'Thriller'."
-    ]
+    "emoji": "👨‍🎤🎸🎤🕺",
+    "resposta": "Freddie Mercury",
+    "categoria": "Cantor",
+    "dicas": ["Vocalista do Queen", "Performances icônicas", "Músicas clássicas do rock"]
   },
   {
+    "emoji": "🐭🧀🎩👢",
+    "resposta": "Ratatouille",
     "categoria": "Filme",
-    "emoji": "🧛‍♂️🩸🏰",
+    "dicas": ["Filme animado", "Rato cozinheiro", "Paris como cenário"]
+  },
+  {
+    "emoji": "🐷👑🏰",
+    "resposta": "O Porquinho Rei",
+    "categoria": "Desenho Animado",
+    "dicas": ["Personagem animado", "Filme infantil", "Animal protagonista"]
+  },
+  {
+    "emoji": "🦹‍♂️🖤🌌🛡️",
+    "resposta": "Thanos",
+    "categoria": "Personagem",
+    "dicas": ["Vilão da Marvel", "Busca as Joias do Infinito", "Grande ameaça galáctica"]
+  },
+  {
+    "emoji": "👦🎩🕴️🐇",
+    "resposta": "Harry Potter",
+    "categoria": "Filme",
+    "dicas": ["Bruxo famoso", "Varinha mágica", "Escola de magia"]
+  },
+  {
+    "emoji": "🧛‍♂️🧛‍♀️🌙💔",
     "resposta": "Drácula",
-    "dicas": [
-      "Um vampiro clássico da literatura e cinema.",
-      "Vive em um castelo na Transilvânia.",
-      "Famoso por morder pescoços."
-    ]
+    "categoria": "Personagem",
+    "dicas": ["Vampiro clássico", "Filme e livro", "Transilvânia"]
   },
   {
-    "categoria": "Música",
-    "emoji": "👑🎤🎵",
-    "resposta": "Beyoncé",
-    "dicas": [
-      "Ex-integrante do grupo Destiny's Child.",
-      "Hits famosos: 'Single Ladies' e 'Halo'.",
-      "Rainha do Pop moderno."
-    ]
+    "emoji": "🦸‍♀️🛡️🗡️",
+    "resposta": "Mulher-Maravilha",
+    "categoria": "Personagem",
+    "dicas": ["Heroína da DC", "Força sobre-humana", "Vem da ilha de Themyscira"]
   },
   {
+    "emoji": "🐒👑🦍🏰",
+    "resposta": "King Kong",
     "categoria": "Filme",
-    "emoji": "👽📞🏠🌌",
-    "resposta": "E.T. - O Extraterrestre",
-    "dicas": [
-      "Um alienígena que se perde na Terra.",
-      "Amizade com um garoto chamado Elliott.",
-      "Famosa frase: 'E.T. phone home'."
-    ]
+    "dicas": ["Gorila gigante", "Clássico do cinema", "Nova York"]
   },
   {
-    "categoria": "Música",
-    "emoji": "🎸👨‍🎤🎶",
-    "resposta": "Elvis Presley",
-    "dicas": [
-      "O rei do Rock 'n' Roll.",
-      "Famoso por 'Jailhouse Rock'.",
-      "Cantor americano icônico dos anos 50."
-    ]
-  },
-  {
+    "emoji": "👸🌹💔🐸",
+    "resposta": "A Princesa e o Sapo",
     "categoria": "Filme",
-    "emoji": "🦖🌴🚫",
-    "resposta": "Jurassic Park",
-    "dicas": [
-      "Parque temático com dinossauros vivos.",
-      "Cientistas clonam dinossauros.",
-      "Cena famosa: T-Rex ataca o carro."
-    ]
+    "dicas": ["Filme da Disney", "Princesa se transforma em sapo", "Cenário de Nova Orleans"]
+  },
+  {
+    "emoji": "🐻🍯🏡👦",
+    "resposta": "Ursinho Pooh",
+    "categoria": "Desenho Animado",
+    "dicas": ["Urso adorável", "Ama mel", "Amigos do Bosque dos Cem Acres"]
+  },
+  {
+    "emoji": "🐰🥕🏁🎩",
+    "resposta": "Coelho Pernalonga",
+    "categoria": "Desenho Animado",
+    "dicas": ["Desenho clássico", "Coelho travesso", "Adora cenouras"]
+  },
+  {
+    "emoji": "🦸‍♂️🦸‍♀️🌍💥",
+    "resposta": "Os Vingadores",
+    "categoria": "Filme",
+    "dicas": ["Equipe Marvel", "Salva o mundo", "Inclui Capitão América, Homem de Ferro e Thor"]
+  },
+  {
+    "emoji": "👨‍🎤🎹🎤🌹",
+    "resposta": "Elton John",
+    "categoria": "Cantor",
+    "dicas": ["Cantor britânico", "Estilo excêntrico", "Músicas icônicas"]
+  },
+  {
+    "emoji": "🧙‍♂️🐍⚡🕯️",
+    "resposta": "Severus Snape",
+    "categoria": "Personagem",
+    "dicas": ["Professor de Hogwarts", "Poções e feitiços", "Amor secreto por Lily"]
+  },
+  {
+    "emoji": "🐳🌊⚓",
+    "resposta": "Moby Dick",
+    "categoria": "Filme/Literatura",
+    "dicas": ["Baleia gigante", "Clássico literário", "Capitão obsessivo"]
+  },
+  {
+    "emoji": "🦹‍♂️🖤🕷️",
+    "resposta": "Venom",
+    "categoria": "Personagem",
+    "dicas": ["Anti-herói Marvel", "Simbionte alienígena", "Parceria com Homem-Aranha"]
+  },
+  {
+    "emoji": "👸👗🌹💃",
+    "resposta": "Cinderela",
+    "categoria": "Filme",
+    "dicas": ["Princesa Disney", "Perde sapatinho de cristal", "Bailes e magia"]
+  },
+  {
+    "emoji": "🐍🧙‍♂️💀🏰",
+    "resposta": "Nagini",
+    "categoria": "Personagem",
+    "dicas": ["Serpente mágica", "Acompanha Voldemort", "Filmes de Harry Potter"]
+  },
+  {
+    "emoji": "🦸‍♀️🦹‍♂️💥🌎",
+    "resposta": "Capitã Marvel",
+    "categoria": "Personagem",
+    "dicas": ["Heroína Marvel", "Poderes de energia", "Filme solo e participação em Vingadores"]
+  },
+  {
+    "emoji": "🐍💍🧙‍♂️🏔️",
+    "resposta": "O Senhor dos Anéis",
+    "categoria": "Filme",
+    "dicas": ["Anel poderoso", "Viagem pela Terra Média", "Protagonista Frodo"]
+  },
+  {
+    "emoji": "🐵👑🦍🏙️",
+    "resposta": "Planeta dos Macacos",
+    "categoria": "Filme",
+    "dicas": ["Macacos inteligentes", "Conflito com humanos", "Cenário futurista"]
+  },
+  {
+    "emoji": "👨‍🎤🎤🎶💃",
+    "resposta": "Michael Jackson",
+    "categoria": "Cantor",
+    "dicas": ["Rei do Pop", "Dançarino icônico", "Hits mundialmente famosos"]
+  },
+  {
+    "emoji": "🐉⚔️👸🏰",
+    "resposta": "Mulan",
+    "categoria": "Filme",
+    "dicas": ["Heroína chinesa", "Se disfarça de soldado", "Filme da Disney"]
+  },
+  {
+    "emoji": "🧙‍♂️🦉📜🪄",
+    "resposta": "Harry Potter",
+    "categoria": "Filme",
+    "dicas": ["Bruxo famoso", "Varinha mágica", "Escola de magia Hogwarts"]
+  },
+  {
+    "emoji": "🐭🧑‍🍳🍲🏰",
+    "resposta": "Ratatouille",
+    "categoria": "Filme",
+    "dicas": ["Rato cozinheiro", "Filme animado", "Paris como cenário"]
+  },
+  {
+    "emoji": "🦁👑🌅🦓",
+    "resposta": "O Rei Leão",
+    "categoria": "Filme",
+    "dicas": ["Filme clássico da Disney", "Leão assume o trono", "Simba e Mufasa"]
+  },
+  {
+    "emoji": "🦸‍♂️🕷️🏙️",
+    "resposta": "Homem-Aranha",
+    "categoria": "Personagem",
+    "dicas": ["Heroi da Marvel", "Atira teias", "Vive em Nova York"]
+  },
+  {
+    "emoji": "🦇🏙️🦸‍♂️",
+    "resposta": "Batman",
+    "categoria": "Personagem",
+    "dicas": ["Herói da DC", "Mora em Gotham", "Usa morcego como símbolo"]
+  },
+  {
+    "emoji": "🧞‍♂️💡🏰",
+    "resposta": "Aladdin",
+    "categoria": "Filme",
+    "dicas": ["Filme da Disney", "Lâmpada mágica", "Desejos concedidos"]
+  },
+  {
+    "emoji": "👩‍🦳❄️🏰",
+    "resposta": "Elsa",
+    "categoria": "Desenho Animado",
+    "dicas": ["Rainha da neve", "Filme Frozen", "Poderes de gelo"]
+  },
+  {
+    "emoji": "👨‍🎤🎤🎹🌟",
+    "resposta": "Elton John",
+    "categoria": "Cantor",
+    "dicas": ["Cantor britânico", "Estilo excêntrico", "Músicas icônicas"]
+  },
+  {
+    "emoji": "🦸‍♂️🔨⚡🌌",
+    "resposta": "Thor",
+    "categoria": "Personagem",
+    "dicas": ["Deus do Trovão", "Filho de Odin", "Usa martelo Mjolnir"]
+  },
+  {
+    "emoji": "🦹‍♂️🖤🌌💎",
+    "resposta": "Thanos",
+    "categoria": "Personagem",
+    "dicas": ["Vilão da Marvel", "Busca as Joias do Infinito", "Grande ameaça galáctica"]
+  },
+  {
+    "emoji": "🦸‍♀️🛡️🗡️🌎",
+    "resposta": "Mulher-Maravilha",
+    "categoria": "Personagem",
+    "dicas": ["Heroína da DC", "Força sobre-humana", "Vem da ilha de Themyscira"]
+  },
+  {
+    "emoji": "🐻🍯🏡👦",
+    "resposta": "Ursinho Pooh",
+    "categoria": "Desenho Animado",
+    "dicas": ["Urso adorável", "Ama mel", "Amigos do Bosque dos Cem Acres"]
+  },
+  {
+    "emoji": "🐰🥕🎩🏁",
+    "resposta": "Coelho Pernalonga",
+    "categoria": "Desenho Animado",
+    "dicas": ["Coelho travesso", "Desenho clássico", "Adora cenouras"]
+  },
+  {
+    "emoji": "🐵👑🦍🏙️",
+    "resposta": "King Kong",
+    "categoria": "Filme",
+    "dicas": ["Gorila gigante", "Clássico do cinema", "Nova York"]
+  },
+  {
+    "emoji": "👸🌹💔🐸",
+    "resposta": "A Princesa e o Sapo",
+    "categoria": "Filme",
+    "dicas": ["Filme Disney", "Princesa se transforma em sapo", "Cenário de Nova Orleans"]
+  },
+  {
+    "emoji": "🧛‍♂️🧛‍♀️🌙💔",
+    "resposta": "Drácula",
+    "categoria": "Personagem",
+    "dicas": ["Vampiro clássico", "Filme e livro", "Transilvânia"]
+  },
+  {
+    "emoji": "🐉⚔️👸🏰",
+    "resposta": "Mulan",
+    "categoria": "Filme",
+    "dicas": ["Heroína chinesa", "Se disfarça de soldado", "Filme da Disney"]
+  },
+  {
+    "emoji": "🐳🌊⚓",
+    "resposta": "Moby Dick",
+    "categoria": "Filme/Literatura",
+    "dicas": ["Baleia gigante", "Clássico literário", "Capitão obsessivo"]
+  },
+  {
+    "emoji": "🦹‍♂️🖤🕷️",
+    "resposta": "Venom",
+    "categoria": "Personagem",
+    "dicas": ["Anti-herói Marvel", "Simbionte alienígena", "Parceria com Homem-Aranha"]
+  },
+  {
+    "emoji": "👸👗🌹💃",
+    "resposta": "Cinderela",
+    "categoria": "Filme",
+    "dicas": ["Princesa Disney", "Perde sapatinho de cristal", "Bailes e magia"]
+  },
+  {
+    "emoji": "🐍💍🧙‍♂️🏔️",
+    "resposta": "O Senhor dos Anéis",
+    "categoria": "Filme",
+    "dicas": ["Anel poderoso", "Viagem pela Terra Média", "Protagonista Frodo"]
+  },
+  {
+    "emoji": "🐵👑🦍🏙️",
+    "resposta": "Planeta dos Macacos",
+    "categoria": "Filme",
+    "dicas": ["Macacos inteligentes", "Conflito com humanos", "Cenário futurista"]
+  },
+  {
+    "emoji": "👨‍🎤🎤🎶💃",
+    "resposta": "Michael Jackson",
+    "categoria": "Cantor",
+    "dicas": ["Rei do Pop", "Dançarino icônico", "Hits mundialmente famosos"]
+  },
+  {
+    "emoji": "🧙‍♂️🐍⚡🕯️",
+    "resposta": "Severus Snape",
+    "categoria": "Personagem",
+    "dicas": ["Professor de Hogwarts", "Poções e feitiços", "Amor secreto por Lily"]
+  },
+  {
+    "emoji": "🦸‍♂️🦸‍♀️🌍💥",
+    "resposta": "Os Vingadores",
+    "categoria": "Filme",
+    "dicas": ["Equipe Marvel", "Salva o mundo", "Inclui Capitão América, Homem de Ferro e Thor"]
+  },
+  {
+    "emoji": "🧙‍♂️🪄🦉📜",
+    "resposta": "Dumbledore",
+    "categoria": "Personagem",
+    "dicas": ["Diretor de Hogwarts", "Mentor de Harry", "Usa chapéu pontudo"]
+  },
+  {
+    "emoji": "🦸‍♀️🦹‍♂️💥🌎",
+    "resposta": "Capitã Marvel",
+    "categoria": "Personagem",
+    "dicas": ["Heroína Marvel", "Poderes de energia", "Filme solo e participação em Vingadores"]
+  },
+  {
+    "emoji": "🧙‍♂️🦉📖🪄",
+    "resposta": "Hermione Granger",
+    "categoria": "Personagem",
+    "dicas": ["Amiga de Harry", "Estudiosa", "Usa magia"]
+  },
+  {
+    "emoji": "🐢🦸‍♂️🏙️",
+    "resposta": "Tartarugas Ninja",
+    "categoria": "Desenho Animado",
+    "dicas": ["Quatro irmãos mutantes", "Treinam artes marciais", "Nome de artistas renascentistas"]
+  },
+  {
+    "emoji": "🐦🎤🎶🌎",
+    "resposta": "Adele",
+    "categoria": "Cantor",
+    "dicas": ["Cantora britânica", "Vocal marcante", "Hits emocionantes"]
   }
 ]
