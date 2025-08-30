@@ -60,8 +60,8 @@ def montar_inline_buttons():
 
 def montar_balão_inicial():
     texto = "🎲 *DESAFIO DE EMOJIS* 🎲\n\n"
-    texto += f"🔮 Categoria: *{rodada['categoria']}*\n\n"
-    texto += f"🟦 Charada: {rodada['emoji']}\n\n"  # Charada na mesma linha
+    texto += f"⚜️ Categoria: *{rodada['categoria']}*\n\n"
+    texto += f"⁉️ Charada: {rodada['emoji']}\n\n"  # Charada na mesma linha
     texto += "💡 Pontuação por acerto:\n"
     texto += "🔹 Sem dica: 10 pts\n"
     texto += "🔹 1ª dica: 6 pts\n"
