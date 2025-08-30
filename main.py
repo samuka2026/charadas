@@ -106,10 +106,10 @@ def start_round(message):
     charada = random.choice(charadas)
 
     todas_respostas = [
-    c['resposta']
-    for c in charadas
-    if c['resposta'] != charada['resposta'] and c['categoria'] == charada['categoria']
-]
+        c['resposta']
+        for c in charadas
+        if c['resposta'] != charada['resposta'] and c['categoria'] == charada['categoria']
+    ]
     opcoes = random.sample(todas_respostas, 7)
     opcoes.append(charada['resposta'])
     random.shuffle(opcoes)
@@ -179,10 +179,19 @@ def callback_resposta(call):
         salvar_ranking()
         bot.send_message(
             rodada["chat_id"],
-            f"✅ *{user} acertou!* 🎉\nVocê ganhou *{pontos} pts*\n\n🎯 Para iniciar um novo desafio, use /emoji_start",
+            f"✅ *{user} acertou!* 🎉\nVocê ganhou *{pontos} pts*\n\n🏆 Ranking Atual:\n" +
+            "\n".join(f"{'🥇' if i==1 else '🥈' if i==2 else '🥉' if i==3 else '⭐'} {u} — {pts_} pts" 
+                      for i, (u, pts_) in enumerate(sorted(ranking.items(), key=lambda x: x[1], reverse=True), start=1)) +
+            "\n\n🎯 Para iniciar um novo desafio, use /emoji_start",
             parse_mode="Markdown"
         )
         rodada.update({k: None if k != "ativa" else False for k in rodada})
+    else:
+        bot.send_message(
+            rodada["chat_id"],
+            f"❌ *{user} errou!* Aguarde a próxima dica para tentar novamente.",
+            parse_mode="Markdown"
+        )
 
 # ======================
 # WEBHOOK FLASK
