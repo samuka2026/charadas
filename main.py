@@ -5,6 +5,7 @@ import json
 import random
 import threading
 import time
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ======================
 # 🔧 CONFIGURAÇÕES
@@ -29,7 +30,8 @@ rodada = {
     "categoria": None,
     "dicas": [],
     "indice_dica": 0,
-    "timer": None
+    "timer": None,
+    "opcoes": []
 }
 
 # ======================
@@ -49,18 +51,22 @@ def carregar_ranking():
         with open("ranking.json", "r", encoding="utf-8") as f:
             ranking = json.load(f)
 
+def montar_inline_buttons():
+    markup = InlineKeyboardMarkup()
+    for i, opcao in enumerate(rodada['opcoes']):
+        markup.add(InlineKeyboardButton(opcao, callback_data=str(i)))
+    return markup
+
 def montar_balão_inicial():
     texto = "🎲 *DESAFIO DE EMOJIS* 🎲\n\n"
-    texto += f"🔑 Categoria: *{rodada['categoria']}*\n\n"
-    texto += f"⁉️ Charada:\n{rodada['emoji']}\n\n"
+    texto += f"🔮 Categoria: *{rodada['categoria']}*\n\n"
+    texto += f"🟦 Charada:\n{rodada['emoji']}\n\n"
     texto += "💡 Pontuação por acerto:\n"
     texto += "🔹 Sem dica: 10 pts\n"
     texto += "🔹 1ª dica: 6 pts\n"
     texto += "🔹 2ª dica: 3 pts\n"
-    texto += "🔹 3ª dica: 1 pt\n"
+    texto += "🔹 2ª dica: 1 pt\n"
     texto += "🔹 Ninguém acerta: 0 pts\n\n"
-
-    # Ranking
     if ranking:
         texto += "🏆 Ranking Atual:\n"
         ordenado = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
@@ -91,7 +97,8 @@ def encerrar_rodada(revelar=True):
             )
         rodada.update({
             "ativa": False, "chat_id": None, "resposta": None,
-            "emoji": None, "categoria": None, "dicas": [], "indice_dica": 0, "timer": None
+            "emoji": None, "categoria": None, "dicas": [], "indice_dica": 0,
+            "timer": None, "opcoes": []
         })
 
 def enviar_novo_balão_pos_acerto(user, pontos):
@@ -102,13 +109,13 @@ def enviar_novo_balão_pos_acerto(user, pontos):
         for i, (u, pts_) in enumerate(ordenado, start=1):
             medalha = "🥇" if i==1 else "🥈" if i==2 else "🥉" if i==3 else "⭐"
             texto += f"{medalha} {u} — {pts_} pts\n"
-    texto += "\n🎯 Para iniciar um novo desafio, use /emoji"
+    texto += "\n🎯 Para iniciar um novo desafio, use /emoji_start"
     bot.send_message(rodada["chat_id"], texto, parse_mode="Markdown")
 
 # ======================
 # 🤖 Comandos do bot
 # ======================
-@bot.message_handler(commands=["emoji"])
+@bot.message_handler(commands=["emoji_start"])
 def start_round(message):
     if rodada["ativa"]:
         bot.reply_to(message, "⚠️ Já existe uma rodada em andamento!")
@@ -117,15 +124,28 @@ def start_round(message):
     charadas = carregar_charadas()
     charada = random.choice(charadas)
 
+    # Montar opções (1 correta + 7 aleatórias)
+    todas_respostas = [c['resposta'] for c in charadas if c['resposta'] != charada['resposta']]
+    opcoes = random.sample(todas_respostas, 7)
+    opcoes.append(charada['resposta'])
+    random.shuffle(opcoes)
+
     rodada["ativa"] = True
     rodada["chat_id"] = message.chat.id
-    rodada["resposta"] = charada["resposta"].lower()
+    rodada["resposta"] = charada["resposta"]
     rodada["emoji"] = charada["emoji"]
     rodada["categoria"] = charada["categoria"]
     rodada["dicas"] = charada["dicas"]
     rodada["indice_dica"] = 0
+    rodada["opcoes"] = opcoes
 
-    bot.send_message(rodada["chat_id"], montar_balão_inicial(), parse_mode="Markdown")
+    bot.send_message(
+        rodada["chat_id"],
+        montar_balão_inicial(),
+        parse_mode="Markdown",
+        reply_markup=montar_inline_buttons()
+    )
+
     iniciar_timer()
 
 @bot.message_handler(commands=["emoji_rank"])
@@ -146,25 +166,24 @@ def parar_rodada(message):
     bot.reply_to(message, "⛔ Rodada encerrada.")
 
 # ======================
-# 🎯 Verificar respostas (com /)
+# 🎯 Callback das opções
 # ======================
-@bot.message_handler(func=lambda m: rodada["ativa"] and m.text.startswith("/"))
-def verificar_resposta(message):
-    resposta = message.text[1:].strip().lower()  # remove o /
-    user = message.from_user.first_name
+@bot.callback_query_handler(func=lambda call: rodada["ativa"])
+def callback_resposta(call):
+    user = call.from_user.first_name
+    indice = int(call.data)
+    escolha = rodada["opcoes"][indice]
 
-    if resposta == rodada["resposta"]:
-        pontos_por_dica = [10, 6, 3, 1]
-        indice = rodada['indice_dica'] if rodada['indice_dica'] < 4 else 3
-        pontos = pontos_por_dica[indice]
+    pontos_por_dica = [10, 6, 3, 1]
+    pontos = pontos_por_dica[rodada["indice_dica"]] if rodada["indice_dica"] < 4 else 1
 
+    if escolha == rodada["resposta"]:
         ranking[user] = ranking.get(user, 0) + pontos
         salvar_ranking()
-
         enviar_novo_balão_pos_acerto(user, pontos)
         encerrar_rodada(revelar=False)
     else:
-        bot.reply_to(message, f"❌ {user}, resposta incorreta! Tente novamente.")
+        bot.answer_callback_query(call.id, f"❌ {user}, resposta incorreta! Tente novamente.")
 
 # ======================
 # 🌐 Webhook Flask
