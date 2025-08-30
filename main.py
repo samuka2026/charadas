@@ -51,8 +51,8 @@ def carregar_ranking():
 
 def montar_balão_inicial():
     texto = "🎲 *DESAFIO DE EMOJIS* 🎲\n\n"
-    texto += f"🔮 Categoria: *{rodada['categoria']}*\n\n"
-    texto += f"🟦 Charada:\n{rodada['emoji']}\n\n"
+    texto += f"🔑 Categoria: *{rodada['categoria']}*\n\n"
+    texto += f"⁉️ Charada:\n{rodada['emoji']}\n\n"
     texto += "💡 Pontuação por acerto:\n"
     texto += "🔹 Sem dica: 10 pts\n"
     texto += "🔹 1ª dica: 6 pts\n"
@@ -146,13 +146,14 @@ def parar_rodada(message):
     bot.reply_to(message, "⛔ Rodada encerrada.")
 
 # ======================
-# 🎯 Verificar respostas
+# 🎯 Verificar respostas (com /)
 # ======================
-@bot.message_handler(func=lambda m: rodada["ativa"])
+@bot.message_handler(func=lambda m: rodada["ativa"] and m.text.startswith("/"))
 def verificar_resposta(message):
-    resposta = message.text.strip().lower()
+    resposta = message.text[1:].strip().lower()  # remove o /
+    user = message.from_user.first_name
+
     if resposta == rodada["resposta"]:
-        user = message.from_user.first_name
         pontos_por_dica = [10, 6, 3, 1]
         indice = rodada['indice_dica'] if rodada['indice_dica'] < 4 else 3
         pontos = pontos_por_dica[indice]
@@ -162,6 +163,8 @@ def verificar_resposta(message):
 
         enviar_novo_balão_pos_acerto(user, pontos)
         encerrar_rodada(revelar=False)
+    else:
+        bot.reply_to(message, f"❌ {user}, resposta incorreta! Tente novamente.")
 
 # ======================
 # 🌐 Webhook Flask
