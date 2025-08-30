@@ -17,21 +17,23 @@ if not TOKEN:
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
 
-# ranking e estado
+# ======================
+# 🔹 Estado do jogo
+# ======================
 ranking = {}
 rodada = {
     "ativa": False,
     "chat_id": None,
     "resposta": None,
     "emoji": None,
+    "categoria": None,
     "dicas": [],
     "indice_dica": 0,
-    "timer": None,
-    "numero": 0
+    "timer": None
 }
 
 # ======================
-# 📂 FUNÇÕES AUXILIARES
+# 📂 Funções auxiliares
 # ======================
 def carregar_charadas():
     with open("charadas.json", "r", encoding="utf-8") as f:
@@ -47,35 +49,34 @@ def carregar_ranking():
         with open("ranking.json", "r", encoding="utf-8") as f:
             ranking = json.load(f)
 
-def enviar_balão_charada():
-    """Envia o balão de charada estilizado com ranking"""
-    charada_texto = f"🎲✨ DESAFIO DE EMOJIS ✨🎲\n\n"
-    charada_texto += f"🔮 Rodada #{rodada['numero']}\n"
-    charada_texto += f"🟦 Charada:\n{rodada['emoji']}\n\n"
-
-    # Dica atual
-    if rodada['indice_dica'] > 0:
-        charada_texto += f"💡 Dica {rodada['indice_dica']}: {rodada['dicas'][rodada['indice_dica']-1]}\n\n"
+def montar_balão_inicial():
+    texto = "🎲 *DESAFIO DE EMOJIS* 🎲\n\n"
+    texto += f"🔮 Categoria: *{rodada['categoria']}*\n\n"
+    texto += f"🟦 Charada:\n{rodada['emoji']}\n\n"
+    texto += "💡 Pontuação por acerto:\n"
+    texto += "🔹 Sem dica: 10 pts\n"
+    texto += "🔹 1ª dica: 6 pts\n"
+    texto += "🔹 2ª dica: 3 pts\n"
+    texto += "🔹 3ª dica: 1 pt\n"
+    texto += "🔹 Ninguém acerta: 0 pts\n\n"
 
     # Ranking
     if ranking:
-        charada_texto += "🏆 Ranking Atual:\n"
+        texto += "🏆 Ranking Atual:\n"
         ordenado = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
         for i, (user, pts) in enumerate(ordenado, start=1):
-            medalha = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else "⭐"
-            charada_texto += f"{medalha} {user} — {pts} pts\n"
-
-    bot.send_message(rodada['chat_id'], charada_texto, parse_mode="Markdown")
+            medalha = "🥇" if i==1 else "🥈" if i==2 else "🥉" if i==3 else "⭐"
+            texto += f"{medalha} {user} — {pts} pts\n"
+    return texto
 
 def iniciar_timer():
     def dicas_progressivas():
         while rodada["ativa"] and rodada["indice_dica"] < len(rodada["dicas"]):
-            time.sleep(60)  # 1 minuto
+            time.sleep(60)  # 1 minutos
             if rodada["ativa"]:
+                dica = rodada["dicas"][rodada["indice_dica"]]
                 rodada["indice_dica"] += 1
-                dica = rodada["dicas"][rodada["indice_dica"]-1]
                 bot.send_message(rodada["chat_id"], f"💡 Dica {rodada['indice_dica']}: {dica}")
-                enviar_balão_charada()
     t = threading.Thread(target=dicas_progressivas)
     t.start()
     rodada["timer"] = t
@@ -90,11 +91,22 @@ def encerrar_rodada(revelar=True):
             )
         rodada.update({
             "ativa": False, "chat_id": None, "resposta": None,
-            "emoji": None, "dicas": [], "indice_dica": 0, "timer": None
+            "emoji": None, "categoria": None, "dicas": [], "indice_dica": 0, "timer": None
         })
 
+def enviar_novo_balão_pos_acerto(user, pontos):
+    texto = f"✅ *{user} acertou!* 🎉\nVocê ganhou *{pontos} pts*\n\n"
+    if ranking:
+        texto += "🏆 Ranking Atual:\n"
+        ordenado = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
+        for i, (u, pts_) in enumerate(ordenado, start=1):
+            medalha = "🥇" if i==1 else "🥈" if i==2 else "🥉" if i==3 else "⭐"
+            texto += f"{medalha} {u} — {pts_} pts\n"
+    texto += "\n🎯 Para iniciar um novo desafio, use /emoji"
+    bot.send_message(rodada["chat_id"], texto, parse_mode="Markdown")
+
 # ======================
-# 🤖 COMANDOS DO BOT
+# 🤖 Comandos do bot
 # ======================
 @bot.message_handler(commands=["emoji"])
 def start_round(message):
@@ -109,11 +121,11 @@ def start_round(message):
     rodada["chat_id"] = message.chat.id
     rodada["resposta"] = charada["resposta"].lower()
     rodada["emoji"] = charada["emoji"]
+    rodada["categoria"] = charada["categoria"]
     rodada["dicas"] = charada["dicas"]
     rodada["indice_dica"] = 0
-    rodada["numero"] += 1
 
-    enviar_balão_charada()
+    bot.send_message(rodada["chat_id"], montar_balão_inicial(), parse_mode="Markdown")
     iniciar_timer()
 
 @bot.message_handler(commands=["emoji_rank"])
@@ -124,7 +136,7 @@ def mostrar_ranking(message):
     texto = "🏆 *Ranking Geral*\n\n"
     ordenado = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
     for i, (user, pts) in enumerate(ordenado, start=1):
-        medalha = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else "⭐"
+        medalha = "🥇" if i==1 else "🥈" if i==2 else "🥉" if i==3 else "⭐"
         texto += f"{medalha} {user}: {pts} pts\n"
     bot.send_message(message.chat.id, texto, parse_mode="Markdown")
 
@@ -134,7 +146,7 @@ def parar_rodada(message):
     bot.reply_to(message, "⛔ Rodada encerrada.")
 
 # ======================
-# 🎯 VERIFICAR RESPOSTAS
+# 🎯 Verificar respostas
 # ======================
 @bot.message_handler(func=lambda m: rodada["ativa"])
 def verificar_resposta(message):
@@ -148,15 +160,11 @@ def verificar_resposta(message):
         ranking[user] = ranking.get(user, 0) + pontos
         salvar_ranking()
 
-        bot.send_message(
-            message.chat.id,
-            f"✅ {user} acertou! Era *{rodada['resposta']}* 🎉 (+{pontos} pts)",
-            parse_mode="Markdown"
-        )
+        enviar_novo_balão_pos_acerto(user, pontos)
         encerrar_rodada(revelar=False)
 
 # ======================
-# 🌐 WEBHOOK FLASK
+# 🌐 Webhook Flask
 # ======================
 @app.route("/" + TOKEN, methods=["POST"])
 def webhook():
@@ -169,7 +177,7 @@ def index():
     return "Bot ativo!", 200
 
 # ======================
-# ▶️ INICIAR
+# ▶️ Iniciar
 # ======================
 if __name__ == "__main__":
     carregar_ranking()
