@@ -1,0 +1,20 @@
+[
+  {
+    "categoria": "Filme",
+    "emoji": "🚢 ❄️ 💔",
+    "resposta": "Titanic",
+    "dicas": ["Ano 1997", "Diretor James Cameron", "Protagonistas Leonardo DiCaprio e Kate Winslet"]
+  },
+  {
+    "categoria": "Ditado Popular",
+    "emoji": "🐦 🤲",
+    "resposta": "Mais vale um pássaro na mão do que dois voando",
+    "dicas": ["Frase antiga", "Fala sobre escolhas", "É sobre preferir algo certo"]
+  },
+  {
+    "categoria": "Música",
+    "emoji": "🕺🌙",
+    "resposta": "Dancing in the Moonlight",
+    "dicas": ["Década de 70", "Muito tocada em filmes", "Banda King Harvest"]
+  }
+]
