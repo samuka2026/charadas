@@ -105,7 +105,11 @@ def start_round(message):
     charadas = carregar_charadas()
     charada = random.choice(charadas)
 
-    todas_respostas = [c['resposta'] for c in charadas if c['resposta'] != charada['resposta']]
+    todas_respostas = [
+    c['resposta']
+    for c in charadas
+    if c['resposta'] != charada['resposta'] and c['categoria'] == charada['categoria']
+]
     opcoes = random.sample(todas_respostas, 7)
     opcoes.append(charada['resposta'])
     random.shuffle(opcoes)
