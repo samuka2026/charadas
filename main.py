@@ -79,20 +79,22 @@ def montar_balão_inicial():
 def iniciar_timer():
     def dicas_progressivas():
         while rodada["ativa"] and rodada["indice_dica"] < len(rodada["dicas"]):
-            time.sleep(60)  # 1 minuto entre dicas
-            if rodada["ativa"]:
-                dica = rodada["dicas"][rodada["indice_dica"]]
-                rodada["indice_dica"] += 1
-                rodada["tentativas"] = {}  # resetar tentativas para a próxima dica
-                bot.send_message(rodada["chat_id"], f"💡 Dica {rodada['indice_dica']}: {dica}")
+            time.sleep(60)  # 1 minuto por dica
+            if not rodada["ativa"]:
+                break
+            dica = rodada["dicas"][rodada["indice_dica"]]
+            rodada["indice_dica"] += 1
+            rodada["tentativas"] = {}  # resetar tentativas para a próxima dica
+            bot.send_message(rodada["chat_id"], f"💡 Dica {rodada['indice_dica']}: {dica}")
+
         # Se ninguém acertou até o final
         if rodada["ativa"]:
-            bot.send_message(rodada["chat_id"], f"⏱️ Ninguém acertou! A resposta era: *{rodada['resposta']}*", parse_mode="Markdown")
+            bot.send_message(
+                rodada["chat_id"],
+                f"⏱️ Ninguém acertou! A resposta era: *{rodada['resposta']}*",
+                parse_mode="Markdown"
+            )
             rodada.update({k: None if k != "ativa" else False for k in rodada})
-    t = threading.Thread(target=dicas_progressivas)
-    t.start()
-    rodada["timer"] = t
-
 # ======================
 # COMANDOS
 # ======================
