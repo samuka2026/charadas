@@ -45,7 +45,7 @@ def carregar_ranking():
 def iniciar_timer():
     def dicas_progressivas():
         while rodada["ativa"] and rodada["indice_dica"] < len(rodada["dicas"]):
-            time.sleep(300)  # 5 minutos
+            time.sleep(60)  # 1 minuto
             if rodada["ativa"]:
                 dica = rodada["dicas"][rodada["indice_dica"]]
                 rodada["indice_dica"] += 1
