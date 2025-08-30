@@ -175,23 +175,44 @@ def callback_resposta(call):
     pontos = pontos_por_dica[rodada["indice_dica"]] if rodada["indice_dica"] < 4 else 1
 
     if escolha == rodada["resposta"]:
+        # Atualiza ranking
         ranking[user] = ranking.get(user, 0) + pontos
         salvar_ranking()
+
+        # Monta ranking
+        texto_ranking = "\n".join(
+            f"{'🥇' if i==1 else '🥈' if i==2 else '🥉' if i==3 else '⭐'} {u} — {pts_} pts"
+            for i, (u, pts_) in enumerate(sorted(ranking.items(), key=lambda x: x[1], reverse=True), start=1)
+        )
+
+        # Botão para novo desafio
+        markup_novo = InlineKeyboardMarkup()
+        markup_novo.add(InlineKeyboardButton("🎯 Novo Desafio", callback_data="novo_desafio"))
+
+        # Mensagem de acerto
         bot.send_message(
             rodada["chat_id"],
-            f"✅ *{user} acertou!* 🎉\nVocê ganhou *{pontos} pts*\n\n🏆 Ranking Atual:\n" +
-            "\n".join(f"{'🥇' if i==1 else '🥈' if i==2 else '🥉' if i==3 else '⭐'} {u} — {pts_} pts" 
-                      for i, (u, pts_) in enumerate(sorted(ranking.items(), key=lambda x: x[1], reverse=True), start=1)) +
-            "\n\n🎯 Para iniciar um novo desafio, use /emoji_start",
-            parse_mode="Markdown"
+            f"✅ *{user} acertou!* 🎉\nVocê ganhou *{pontos} pts*\n\n🏆 Ranking Atual:\n{texto_ranking}",
+            parse_mode="Markdown",
+            reply_markup=markup_novo
         )
+
+        # Encerra rodada
         rodada.update({k: None if k != "ativa" else False for k in rodada})
+
     else:
         bot.send_message(
             rodada["chat_id"],
             f"❌ *{user} errou!* Aguarde a próxima dica para tentar novamente.",
             parse_mode="Markdown"
         )
+
+# Callback para iniciar novo desafio pelo botão
+@bot.callback_query_handler(func=lambda call: call.data == "novo_desafio")
+def iniciar_novo_desafio(call):
+    bot.answer_callback_query(call.id)
+    bot.send_message(call.message.chat.id, "🎲 Iniciando novo desafio...")
+    start_round(call.message)
 
 # ======================
 # WEBHOOK FLASK
