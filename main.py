@@ -96,7 +96,7 @@ def encerrar_rodada(revelar=True):
 # ======================
 # 🤖 COMANDOS DO BOT
 # ======================
-@bot.message_handler(commands=["emoji_start"])
+@bot.message_handler(commands=["emoji"])
 def start_round(message):
     if rodada["ativa"]:
         bot.reply_to(message, "⚠️ Já existe uma rodada em andamento!")
